@@ -1,6 +1,6 @@
 # pix2grasshopper
 
-## _Made for the course **DESIGN 6297 – Coding for Design I**._
+_Made for the course **DESIGN 6297 – Coding for Design I**._
 
 ## Overview
 
