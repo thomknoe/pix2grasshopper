@@ -41,7 +41,7 @@ def generate_python_code(description):
     prompt = (
         f"Convert the following description into Python code using RhinoScriptSyntax "
         f"for Rhino in Grasshopper, suitable for a GHPython component: {description}. "
-        f"Make sure to include calls to the functions made int he sciprt at the end of code and makes sure to outupts the geometry through the 'a' variable."
+        f"Make sure to include calls to the functions made in the script at the end of code and makes sure to outupts the geometry through the 'a' variable."
         f"Do not include introductory or explanation text, simply give me the code, dont include LaTeX formating either for the start or end fo the code block"
     )
 
