@@ -42,7 +42,8 @@ def generate_python_code(description):
         f"Convert the following description into Python code using RhinoScriptSyntax "
         f"for Rhino in Grasshopper, suitable for a GHPython component: {description}. "
         f"Make sure to include calls to the functions made in the script at the end of code and makes sure to outupts the geometry through the 'a' variable."
-        f"Do not include introductory or explanation text, simply give me the code, dont include LaTeX formating either for the start or end fo the code block"
+        f"Try to make the output gemoetrya  3D form, with patterns extending into all 3 dimensions (X,Y,Z). Make sure the output is a valid geometry in Rhino."
+        f"Do not include introductory or explanation text, simply give me the code, dont include  formating either for the start or end of the code block (i.e. ```)"
     )
 
     try:
