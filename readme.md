@@ -78,23 +78,18 @@ The main pix2grasshopper workspace is the primary hub for generating geometry, a
 
 # Results
 
-![Flower](https://github.com/thomknoe/pix2grasshopper/blob/main/Example%20Pictures/flower.png)
 ![Rhino flower](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoFlower.png)
 _"Sunflowers have a large, circular inflorescence with a striking pattern of spiraling seeds in the center, arranged in a precise Fibonacci sequence. The petals form a radial pattern around this central disk, creating a harmonious balance of organic and mathematical geometry."_
 
-![Honeycomb](https://github.com/thomknoe/pix2grasshopper/blob/main/Example%20Pictures/honeycomb.png)
 ![Rhino honeycomb](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoHoneycomb.png)
 _"Beehives are intricate networks of hexagonal cells, designed for maximum efficiency and strength. The repeating geometry creates a seamless, interlocking pattern that is both functional and visually harmonious."_
 
-![Mangrove](https://github.com/thomknoe/pix2grasshopper/blob/main/Example%20Pictures/mangrove.png)
 ![Rhino mangrove](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoMangrove.png)
 _"Mangrove trees have complex, arching root systems that spread outward and downward in interwoven networks. The roots form a dense, supportive lattice that stabilizes the tree in waterlogged environments, creating a geometric forest of stilt-like supports."_
 
-![Snowflake](https://github.com/thomknoe/pix2grasshopper/blob/main/Example%20Pictures/snowflake.png)
 ![Rhino snowflake](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoSnowflake.png)
 _"Snowflakes are crystalline structures that exhibit radial symmetry, with six-sided geometries that vary infinitely. Each flake is a unique, intricate pattern formed by the freezing of water vapor in the atmosphere."_
 
-![Wave](https://github.com/thomknoe/pix2grasshopper/blob/main/Example%20Pictures/wave.png)
 ![Rhino wave](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoWave.png)
 _"Waves propagate across oceans and lakes, forming rhythmic peaks and troughs. The geometry shifts dynamically, from small ripples to towering swells, with foam and spray adding texture to the surface."_
 
