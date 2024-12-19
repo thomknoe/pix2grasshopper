@@ -71,11 +71,11 @@ It can also clear dynamic inputs and associated sliders, and it handles errors d
 
 - geometry: The processed results (geometry) after code execution.
 
-# Main Workspace
+# pix2grasshopper Workspace
 
 ![pix2grasshopper worksapce](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/pix2grasshopper_workspace.png)
 
-The main pix2grasshopper workspace is the primary hub for generating geometry, and having an overview over all all of the inputs and outputs going into the pix2grasshopper system. The main workspace is divided into three sections: a section where all the file paths and API keys reside, a section where all the python components operate, and a section where all the outputs from the system can be seen via text panels.
+The main pix2grasshopper workspace is the primary hub for generating geometry, and having an overview over all of the inputs and outputs going into the pix2grasshopper system. The workspace is divided into three sections. A section where all the file paths and API keys reside, a section where all the python components operate, and a section where all the outputs from the system can be seen via text panels. Detailed instructions on how to use pix2grasshopper are also included ont he lower left corner of the workspace.
 
 # Results
 
