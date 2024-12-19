@@ -98,4 +98,4 @@ CLIP Description: _"Waves propagate across oceans and lakes, forming rhythmic pe
 
 - Process errors occur when the reset button is pressed when there is not a one-to-one correspondence between dynamically generated sliders and inputs
 - Sliders do not update the geometry upon generation and require a manual component reset in order to manipulate the geometry in real time
-- Not all geometries are valid and sometimes fail to render, which can be due to item type (i.e. producing Goo objects instead of Geometry objects)
+- Not all geometries are valid and sometimes fail to render, which can be due to incorrect instantiation item type (i.e. producing Goo objects instead of Geometry objects)
