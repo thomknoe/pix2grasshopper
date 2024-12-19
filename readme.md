@@ -1,10 +1,12 @@
 # Overview
 
+![pix2grasshopper header](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/pix2grasshopper_header.png)
+
 pix2grasshopper is an OpenAI-integrated Grasshopper component set that processes digital images, with a particular emphasis on patterns found in nature, using CLIP to classify images, JSON to store descriptions, and ChatGPT to generate functional GhPython scripts with generating slider parameters and optional error handling methods. It helps designers bypass any linguistic limitations and create a workflow where their inspiration—often rooted in visual and spatial understanding—directly informs the design process without the need for translation into code-specific language. The primary users for this component set are students, bio-inspired designers, parametric designers, and 3D artists.
 
 # Quick start
 
-_To use pix2grasshopper with success, please download this repository and use the pix2grasshopper_main_demo_example.gh file for code generation. While there exists a component plugin, pix2grasshopper.gha which can be installed by placing it in your Grasshopper special components folder, it is currently experiencing errors in the geometry output._
+_To use pix2grasshopper with success, please use the `pix2grasshopper_main_demo_example.gh` file for code generation. While there exists a component plugin `pix2grasshopper.gha`, which can be installed by placing it in your Grasshopper special components folder, it is currently experiencing errors in the geometry output._
 
 _You will also need your own OpenAI API key to use this workflow_
 
@@ -13,6 +15,8 @@ _You will also need your own OpenAI API key to use this workflow_
 3. Follow the instructions in the large text panel in the pix2grasshopper workspace, and enjoy!
 
 # Detailed Guide
+
+![pix2grasshopper diagram](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/pix2grasshopper_diagram.png)
 
 The pix2grasshopper component set consists of three different components that combine to create a system for inputting images and generating code. They are pix2grasshopper, Code Checker, and Code Executable. Each component has different communications with OpenAI API and have different outputs for both the Grasshopper and Rhino environment.
 
@@ -67,6 +71,8 @@ It can also clear dynamic inputs and associated sliders, and it handles errors d
 - geometry: The processed results (geometry) after code execution.
 
 # Main Workspace
+
+![pix2grasshopper worksapce](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/pix2grasshopper_workspace.png)
 
 The main pix2grasshopper workspace is the primary hub for generating geometry, and having an overview over all all of the inputs and outputs going into the pix2grasshopper system. The main workspace is divided into three sections: a section where all the file paths and API keys reside, a section where all the python components operate, and a section where all the outputs from the system can be seen via text panels.
 
