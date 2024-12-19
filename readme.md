@@ -2,7 +2,7 @@
 
 ![pix2grasshopper header](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/pix2grasshopper_header.png)
 
-pix2grasshopper is an OpenAI-integrated Grasshopper component set that processes digital images, with a particular emphasis on patterns found in nature, using CLIP to classify images, JSON to store descriptions, and ChatGPT to generate functional GhPython scripts with generating slider parameters and optional error handling methods. It helps designers bypass any linguistic limitations and create a workflow where their inspiration—often rooted in visual and spatial understanding—directly informs the design process without the need for translation into code-specific language. The primary users for this component set are students, bio-inspired designers, parametric designers, and 3D artists.
+pix2grasshopper is an OpenAI-integrated Grasshopper component set that processes digital images, with a particular emphasis on patterns found in nature, using CLIP to classify images, JSON to store descriptions, and ChatGPT to generate functional GhPython scripts with generating slider parameters and optional error handling methods. It helps designers bypass any linguistic limitations and creates a workflow where their inspiration—often rooted in visual and spatial understanding—directly informs the design process without the needing translation into code-specific language. The primary users for this component set are students, bio-inspired designers, parametric designers, and 3D artists.
 
 # Quick start
 
@@ -12,7 +12,8 @@ _You will also need your own OpenAI API key to use this workflow_
 
 1. Clone this repsoitory `git clone https://github.com/thomknoe/pix2grasshopper.git`
 2. Open the file `pix2grasshopper_main_demo_example.gh` and ensure you also have `descriptions.json`
-3. Follow the instructions in the large text panel in the pix2grasshopper workspace, and enjoy!
+3. Either load up your image or use one of the example images in the repository
+4. Follow the instructions in the large text panel in the pix2grasshopper workspace, and enjoy!
 
 # Detailed Guide
 
@@ -88,7 +89,7 @@ CLIP Description: _"Beehives are intricate networks of hexagonal cells, designed
 CLIP Description: _"Mangrove trees have complex, arching root systems that spread outward and downward in interwoven networks. The roots form a dense, supportive lattice that stabilizes the tree in waterlogged environments, creating a geometric forest of stilt-like supports."_
 
 ![Rhino snowflake](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoSnowflake.png)
-CLIP Description: _"Snowflakes are crystalline structures that exhibit radial symmetry, with six-sided geometries that vary infinitely. Each flake is a unique, intricate pattern formed by the freezing of water vapor in the atmosphere."_
+CLIP Description: _"Snowflakes are crystalline structures that exhibit radial symmetry, with six-sided geometries that vary. Each flake is a unique, intricate pattern formed by the freezing of water vapor in the atmosphere."_
 
 ![Rhino wave](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoWave.png)
 CLIP Description: _"Waves propagate across oceans and lakes, forming rhythmic peaks and troughs. The geometry shifts dynamically, from small ripples to towering swells, with foam and spray adding texture to the surface."_
@@ -96,5 +97,5 @@ CLIP Description: _"Waves propagate across oceans and lakes, forming rhythmic pe
 # Current Limitations/Bugs
 
 - Process errors occur when the reset button is pressed if there is not a one-to-one correspondence between dynamically generated sliders and inputs
-- Sliders do not update the geometry upon generationa nd require a manual componenent reset in order to manipulate the geometry in real time
+- Sliders do not update the geometry upon generation and require a manual componenent reset in order to manipulate the geometry in real time
 - Not all geometries are valid and sometimes fail to render, which can be due to item type (i.e. producing Goo objects istead of Geometry objects)
