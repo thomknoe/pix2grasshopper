@@ -1,6 +1,6 @@
-# pix2grasshopper
+![pix2grasshopper header](https://github.com/thomknoe/pix2grasshopper/blob/main/github-cover.png)
 
-![pix2grasshopper header](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/pix2grasshopper_header.png)
+# pix2grasshopper
 
 pix2grasshopper is an OpenAI-integrated Grasshopper component set that processes digital images, with a particular emphasis on patterns found in nature, using CLIP to classify images, JSON to store descriptions, and ChatGPT to generate functional GhPython scripts with generating slider parameters and optional error handling methods. It helps designers bypass any linguistic limitations and creates a workflow where their inspiration—often rooted in visual and spatial understanding—directly informs the design process without needing to translate into code-specific language. The primary users for this component set are students, bio-inspired designers, parametric designers, and 3D artists.
 
@@ -12,12 +12,10 @@ _You will also need your own OpenAI API key to use this workflow._
 
 1. Clone this repsoitory `git clone https://github.com/thomknoe/pix2grasshopper.git`
 2. Open the file `pix2grasshopper_main_demo_example.gh` and ensure you also have `descriptions.json`
-3. Either load up your image or use one of the example images in the repository
-4. Follow the instructions in the large text panel in the pix2grasshopper workspace, and enjoy!
+3. Either load up your image or use one of the example images in the `Example Pictures` folder
+4. Follow the instructions in the large text panel in the pix2grasshopper workspace
 
 # Detailed Guide
-
-![pix2grasshopper diagram](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/pix2grasshopper_diagram.png)
 
 The pix2grasshopper component set consists of three different components that combine to create a system for inputting images and generating code. They are `pix2grasshopper`, `Code Checker`, and `Code Executable`. Each component has different communications with OpenAI API and have different outputs for both the Grasshopper and Rhino environment.
 
