@@ -75,12 +75,6 @@ It can also clear dynamic inputs and associated sliders, and it handles errors d
 - `pix2grasshopper_unpackaged_components.gh`: The unpacked components with descriptions
 - `descriptions.json`: Synthetically generated database of naturalistic descriptions
 
-# Current Limitations/Bugs
-
-- Process errors occur when the reset button is pressed when there is not a one-to-one correspondence between dynamically generated sliders and inputs.
-- Sliders do not update the geometry upon generation and require a manual component reset in order to manipulate the geometry in real time.
-- Not all geometries are valid and sometimes fail to render, which can be due to incorrect instantiation of item types (i.e. producing Goo objects instead of Geometry objects).
-
 # Example Images
 
 ![Rhino flower](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoFlower.png)
@@ -92,3 +86,9 @@ It can also clear dynamic inputs and associated sliders, and it handles errors d
 ![Rhino snowflake](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoSnowflake.png)
 
 ![Rhino wave](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoWave.png)
+
+# Issues & Bugs
+
+- Process errors occur when the reset button is pressed when there is not a one-to-one correspondence between dynamically generated sliders and inputs.
+- Sliders do not update the geometry upon generation and require a manual component reset in order to manipulate the geometry in real time.
+- Not all geometries are valid and sometimes fail to render, which can be due to incorrect instantiation of item types (i.e. producing Goo objects instead of Geometry objects).
