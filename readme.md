@@ -4,7 +4,7 @@
 
 pix2grasshopper is an OpenAI-integrated Grasshopper component set that processes digital images, with a particular emphasis on patterns found in nature, using CLIP to classify images, JSON to store descriptions, and ChatGPT to generate functional GhPython scripts with generating slider parameters and optional error handling methods. It helps designers bypass any linguistic limitations and creates a workflow where their inspiration—often rooted in visual and spatial understanding—directly informs the design process without needing to translate into code-specific language. The primary users for this component set are students, bio-inspired designers, parametric designers, and 3D artists.
 
-# Quick start
+# Quick Start
 
 _To use pix2grasshopper with success, please use the `pix2grasshopper_main_demo_example.gh` file for code generation. While there exists a component plugin `pix2grasshopper.gha`, which can be installed by placing it in your Grasshopper special components folder, it is currently experiencing errors in the geometry output._
 
@@ -19,43 +19,41 @@ _You will also need your own OpenAI API key to use this workflow._
 
 ![pix2grasshopper diagram](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/pix2grasshopper_diagram.png)
 
-The pix2grasshopper component set consists of three different components that combine to create a system for inputting images and generating code. They are "pix2grasshopper", "Code Checker", and "Code Executable". Each component has different communications with OpenAI API and have different outputs for both the Grasshopper and Rhino environment.
+The pix2grasshopper component set consists of three different components that combine to create a system for inputting images and generating code. They are `pix2grasshopper`, `Code Checker`, and `Code Executable`. Each component has different communications with OpenAI API and have different outputs for both the Grasshopper and Rhino environment.
 
-## pix2grasshopper Component
+## `pix2grasshopper` Component
 
-Processes an input image to generate a caption using the CLIP model and creates Python code for nature-inspired geometry
-in Grasshopper using OpenAI's GPT API. Outputs include the generated code, parameter ranges, and image description.
-
-### Inputs:
-
-- my_key (str): OpenAI API key.
-- img_path (str): Path to the input image.
-- json_path (str): Path to the token JSON.
-- on_off (bool): Trigger to run the script.
-
-### Outputs:
-
-- code (str): Generated Python code for Grasshopper.
-- params (str): JSON string of parameter names and ranges.
-- desc (str): Image description from CLIP.
-
-## Code Checker Component
-
-Processes an input Python code string, parses dynamic inputs from a dictionary, executes
-the code, and handles errors by fetching code suggestions from OpenAI to fix the issues.
+Processes an input image to generate a caption using the CLIP model and creates Python code for nature-inspired geometry in Grasshopper using OpenAI's GPT API. Outputs include the generated code, parameter ranges, and image description.
 
 ### Inputs:
 
-- my_key (str): OpenAI API key.
-- params (str): Dictionary string representing dynamic slider inputs, parsed into a Python dictionary.
-- code (str): Python code string to be executed with dynamic inputs.
+- `my_key (str)`: OpenAI API key
+- `img_path (str)`: Path to the input image
+- `json_path (str)`: Path to the token JSON
+- `on_off (bool)`: Trigger to run the script
 
 ### Outputs:
 
-- feedback (str): The original or corrected Python code after execution, including suggestions for errors.
-- exec_results (dict): The results from executing the Python code.
+- `code (str)`: Generated Python code for Grasshopper
+- `params (str)`: JSON string of parameter names and ranges
+- `desc (str)`: Image description from CLIP
 
-## Code Executable Component
+## `Code Checker` Component
+
+Processes an input Python code string, parses dynamic inputs from a dictionary, executes the code, and handles errors by fetching code suggestions from OpenAI to fix the issues.
+
+### Inputs:
+
+- `my_key (str)`: OpenAI API key
+- `params (str)`: Dictionary string representing dynamic slider inputs, parsed into a Python dictionary
+- `code (str)`: Python code string to be executed with dynamic inputs
+
+### Outputs:
+
+- `feedback (str)`: The original or corrected Python code after execution, including suggestions for errors
+- `exec_results (dict)`: The results from executing the Python code
+
+## `Code Executable` Component
 
 Manages input sliders in Grasshopper, parses dictionary strings into Python dictionaries, executes
 provided code with dynamically generated inputs, and manages sliders based on parsed input values.
@@ -63,39 +61,36 @@ It can also clear dynamic inputs and associated sliders, and it handles errors d
 
 ### Inputs:
 
-- params (str): A string representing a dictionary of dynamic input ranges.
-- code (str): The Python code string to be executed with dynamic inputs.
-- reset (bool): Flag to clear dynamic inputs and sliders.
+- `params (str)`: A string representing a dictionary of dynamic input ranges
+- `code (str)`: The Python code string to be executed with dynamic inputs
+- `reset (bool)`: Flag to clear dynamic inputs and sliders
 
 ### Outputs:
 
-- geometry: The processed results (geometry) after code execution.
+- `geometry`: The processed results (geometry) after code execution
 
-# pix2grasshopper Workspace
+# Files
 
-![pix2grasshopper worksapce](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/pix2grasshopper_workspace.png)
+- `pix2grasshopper.rhproj`: pix2grasshopper plugin project file
+- `pix2grasshopper.gha`: pix2grasshopper plugin for the packaged components
+- `pix2grasshopper_main_demo_example.gh`: The main pix2grasshopper workspace file
+- `pix2grasshopper_unpackaged_components.gh`: The unpacked components with descriptions
+- `descriptions.json`: Synthetically generated database of naturalistic descriptions
 
-The main pix2grasshopper workspace is the primary hub for generating geometry, and having an overview over all of the inputs and outputs going into the pix2grasshopper system. The workspace is divided into three sections. A section where all the file paths and API keys reside, a section where all the python components operate, and a section where all the outputs from the system can be seen via text panels. Detailed instructions on how to use pix2grasshopper are also included on the lower left corner of the workspace.
-
-# Results
+# Example Images
 
 ![Rhino flower](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoFlower.png)
-CLIP Description: _"Sunflowers have a large, circular inflorescence with a striking pattern of spiraling seeds in the center, arranged in a precise Fibonacci sequence. The petals form a radial pattern around this central disk, creating a harmonious balance of organic and mathematical geometry."_
 
 ![Rhino honeycomb](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoHoneycomb.png)
-CLIP Description: _"Beehives are intricate networks of hexagonal cells, designed for maximum efficiency and strength. The repeating geometry creates a seamless, interlocking pattern that is both functional and visually harmonious."_
 
 ![Rhino mangrove](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoMangrove.png)
-CLIP Description: _"Mangrove trees have complex, arching root systems that spread outward and downward in interwoven networks. The roots form a dense, supportive lattice that stabilizes the tree in waterlogged environments, creating a geometric forest of stilt-like supports."_
 
 ![Rhino snowflake](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoSnowflake.png)
-CLIP Description: _"Snowflakes are crystalline structures that exhibit radial symmetry, with six-sided geometries that vary. Each flake is a unique, intricate pattern formed by the freezing of water vapor in the atmosphere."_
 
 ![Rhino wave](https://github.com/thomknoe/pix2grasshopper/blob/main/Images/Results/rhinoWave.png)
-CLIP Description: _"Waves propagate across oceans and lakes, forming rhythmic peaks and troughs. The geometry shifts dynamically, from small ripples to towering swells, with foam and spray adding texture to the surface."_
 
 # Current Limitations/Bugs
 
-- Process errors occur when the reset button is pressed when there is not a one-to-one correspondence between dynamically generated sliders and inputs
-- Sliders do not update the geometry upon generation and require a manual component reset in order to manipulate the geometry in real time
-- Not all geometries are valid and sometimes fail to render, which can be due to incorrect instantiation item type (i.e. producing Goo objects instead of Geometry objects)
+- Process errors occur when the reset button is pressed when there is not a one-to-one correspondence between dynamically generated sliders and inputs.
+- Sliders do not update the geometry upon generation and require a manual component reset in order to manipulate the geometry in real time.
+- Not all geometries are valid and sometimes fail to render, which can be due to incorrect instantiation of item types (i.e. producing Goo objects instead of Geometry objects).
